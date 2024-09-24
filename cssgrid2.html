@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid Part 2 Grid template areas property</title>
+    <style>
+        .box1{
+            grid-area: header;
+        }
+        .box2{
+            grid-area: menu;
+        }
+        .box3{
+            grid-area: main;
+        }
+        .box4{
+            grid-area: right;
+        }
+        .box5{
+            grid-area: footer;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 'header header header header header header'
+            'menu menu main main right right'
+            'menu menu footer footer footer footer';
+            gap: 10px;
+        }
+        .container > div{
+            background-color: gray;
+            text-align: center;
+            border: 2px solid ;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Header</div>
+        <div class="box box2">menu</div>
+        <div class="box box3">main</div>
+        <div class="box box4">right</div>
+        <div class="box box5">footer</div>
+    </div>
+</body>
+</html>
